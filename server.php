@@ -4,7 +4,7 @@
         $message = $_GET['message'];
         $word = $_GET['word'];
         $message_length = strlen($message);
-        $new_message = str_replace('merda', '***', $message);
+        $new_message = str_replace('merda', '***', $message, $counter);
         $new_message_length = strlen($new_message);
         var_dump($message);
         var_dump($word);
@@ -26,6 +26,7 @@
         <p>Lunghezza paragrafo: <?php echo $message_length; ?></p>
         <p>Paragrafo censurato: <?php echo $new_message; ?></p>
         <p>Lunghezza paragrafo censurato: <?php echo $new_message_length; ?></p>
+        <p>Sostituzioni fatte nel paragrafo: <?php echo $counter; ?></p>
     </div>
 </body>
 </html>
