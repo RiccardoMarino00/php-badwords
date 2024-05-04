@@ -4,7 +4,7 @@
         $message = $_GET['message'];
         $word = $_GET['word'];
         $message_length = strlen($message);
-        $new_message = str_replace('merda', '***', $message, $counter);
+        $new_message = str_replace( $word, '***', $message, $counter);
         $new_message_length = strlen($new_message);
         var_dump($message);
         var_dump($word);
